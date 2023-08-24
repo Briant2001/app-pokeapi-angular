@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
+
 
 import { AppComponent } from './app.component';
 import { MenuModule } from './menu/menu.module';
+import { PokemoModule } from './pokemon/pokemon.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +13,9 @@ import { MenuModule } from './menu/menu.module';
   ],
   imports: [
     BrowserModule,
-    MenuModule
+    MenuModule,
+    PokemoModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
