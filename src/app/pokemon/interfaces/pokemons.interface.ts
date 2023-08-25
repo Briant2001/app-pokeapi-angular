@@ -1,3 +1,4 @@
+
 export interface SearchResponse {
   count:    number;
   next:     string;
@@ -8,4 +9,9 @@ export interface SearchResponse {
 export interface URLPokemon {
   name: string;
   url:  string;
+
+
 }
+
+
+

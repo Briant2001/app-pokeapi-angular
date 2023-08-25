@@ -12,9 +12,15 @@ export class PokemonPagesComponent {
 
   }
 
-  get urlPokemon():URLPokemon[]{
-    return this.pokemonsService.url;
+  get urlPokemon(){
+    return this.pokemonsService.pokemon;
+
   }
+
+
+
+
+
 
 
 }
