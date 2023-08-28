@@ -24,6 +24,12 @@
       "dom"
     ]
   },
+  "types": [
+    "node",
+    "d3-shape",
+    "d3-scale"
+  ]
+,  
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

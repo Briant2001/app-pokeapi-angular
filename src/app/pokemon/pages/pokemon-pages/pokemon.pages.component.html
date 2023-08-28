@@ -1,2 +1,32 @@
-<pokemon-card-list [urlPersonajes]="urlPokemon" ></pokemon-card-list>
+<div class="relative">
+  <pokemon-card-list #pokemonElement [urlPersonajes]="informationPokemon"></pokemon-card-list>
 
+
+  <button (click)="next()" class="fixed inset-y-0 right-0 flex items-center pl-4
+  bg-transparent  text-transparent-500 hover:text-white text-6xl
+  "> {{">"}} </button>
+  <br>
+  <button (click)="backspace()" class="fixed inset-y-0 left-0 flex items-center pl-4
+  bg-transparent  text-transparent-500 hover:text-white text-6xl"> {{"<"}}</button>
+
+</div>
+
+
+<!-- 
+<style>
+    .bar-chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Estilos para el elemento canvas del gráfico */
+#barCanvas {
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+  max-width: 600px; /* Define un ancho máximo si es necesario */
+  height: auto; /* Permite que la altura se ajuste automáticamente */
+  border: 1px solid #ccc; /* Agrega un borde al gráfico */
+  margin-top: 20px; /* Espacio superior entre el gráfico y otros elementos */
+}
+</style> -->
