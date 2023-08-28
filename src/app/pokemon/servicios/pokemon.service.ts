@@ -13,6 +13,7 @@ import { mergeMap  } from 'rxjs/operators';
 })
 export class PokemonService {
   private URL: string = 'https://pokeapi.co/api/v2/pokemon/';
+
   private information: Pokemon[] = [];
   private next:number=0;
   private datosSubject = new Subject<any>();
@@ -22,7 +23,7 @@ export class PokemonService {
   }
 
   pokemon(): Pokemon[] {
-    
+
     return this.information;
   }
 
@@ -36,20 +37,18 @@ export class PokemonService {
       );
 
       forkJoin(observables).subscribe((response)=>{
-        
         this.information.push(
           ...response.map((response) => ({
             id: response.id,
             name: response.name,
             image: response.sprites?.other?.['official-artwork'].front_default,
             stats:response.stats
-          }))
-        );
-        
+          })));
+
         //console.log(this.information);
         this.datosSubject.next(this.information)
         this.information=[];
-        
+
       })
     })
   }

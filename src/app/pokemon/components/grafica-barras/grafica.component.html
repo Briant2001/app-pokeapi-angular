@@ -1,43 +1,75 @@
-<div class="content bg-sky-950 scroll-mt-px">
-    <div class="content-image">
-        <div id="carousel">
+<div class="content bg-sky-950 grid grid-cols-5 grid-rows-5">
 
-            <div class="wrapper">
-                <div class="container" id="c0">
-                    <div class="image" id="i0">
-                        
-                        <div class="city">
-            
-                        <img [src]="img" alt="">
-            
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
+  <div class="div">
 
-        </div>
-        
-        <h3 class="nombre text-orange-600 text-6xl">{{name |uppercase}}</h3>
-    </div>
-    
-    <div class="grafica">
-        <div style="display: block; " >
-            <canvas baseChart
-                    [datasets]="barChartData"
-                    [labels]="barChartLabels"
-                    [options]="barChartOptions"
-                    [legend]="barChartLegend"
-                    width="850px" 
-                    height="500"
-                    >
-            </canvas>
-          </div>
-    </div>
+  </div>
+
+  <div class="div">
+
+
+  </div>
+
+  <div class="div">
+
+
+  </div>
+
+  <div class="div">
+
+
+  </div>
+  <div class="div">
+
+
+  </div>
+
 </div>
 
 
 
 
 
-	
+
+
+
+
+<!--
+<div class="div">
+  <h1>ESTADISTICAS</h1>
+  <h3 class="nombre text-orange-600 text-6xl">{{name |uppercase}}</h3>
+</div>
+
+  <div class="content-image">
+      <div id="carousel">
+
+          <div class="rounded wrapper scale-125 transform-gpu">
+              <div class="container" id="c0">
+                  <div class="" id="i0">
+
+                      <div class="city ">
+
+                      <img [src]="img" alt="" class="image" >
+
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+
+      </div>
+
+
+  </div>
+
+  <div id="miContenedorDeGrafica" >
+      <div style="display: block; " >
+          <canvas baseChart
+                  [datasets]="barChartData"
+                  [labels]="barChartLabels"
+                  [options]="barChartOptions"
+                  [legend]="barChartLegend"
+
+                  >
+          </canvas>
+        </div>
+  </div> -->

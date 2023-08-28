@@ -17,16 +17,15 @@ export class CardListComponent {
   public namee!:string
 
   @ViewChild('name') nombre!:ElementRef<HTMLElement>
-  
-  public bool:boolean=false;
+
+  public bool:boolean=true;
 
   constructor(private pokemonService: PokemonService,){}
   verGrafica(id:number,img:string){
+    this.namee=this.urlPersonajes[id].name;
 
-    this.namee=this.urlPersonajes[id-1].name;
     this.img=img;
     this.personaje=this.urlPersonajes[id].stats;
-    console.log(this.personaje);
     this.bool=true;
   }
   cerrar(){

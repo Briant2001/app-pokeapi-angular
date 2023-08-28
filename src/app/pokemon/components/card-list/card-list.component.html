@@ -1,20 +1,20 @@
 <div *ngIf="urlPersonajes.length > 0; else notPokemon" class="flex flex-wrap">
-  <div *ngFor="let item of urlPersonajes"  class="w-1/4">
-    
+  <div *ngFor="let item of urlPersonajes; let i=index"  class="w-1/4">
+    {{item.id}}
     <div class="card">
       <div class="p-5 flex flex-col">
         <div class="rounded-xl overflow-hidden items-center">
           <img [src]="item.image" alt="" class="w-36 mx-auto">
         </div>
-        <h5 class="text-2xl md:text3xl font-medium mt-3" #name>
-          {{item.name}}
+        <h5 class="nombre text-2xl md:text3xl font-medium mt-3" #name>
+          {{item.name|uppercase}}
         </h5>
         <p class="text-slate-500 text-lg mt-3 cursor-pointer">
           Lorem ipsum dolor sit amet consectetur</p>
-        <a (click)="verGrafica(item.id,item.image!)" class="text-center bg-blue-400 text-blue-700 py-2 rounded-lg font-semibold mt-4 hover:bg-blue-300 focus:scale-95 transition-all duration-200 ease-out">
+        <a (click)="verGrafica(i,item.image!)" class="cursor-pointer text-center bg-blue-400 text-blue-700 py-2 rounded-lg font-semibold mt-4 hover:bg-blue-300 focus:scale-95 transition-all duration-200 ease-out">
           ver
         </a>
-        
+
       </div>
     </div>
   </div>
@@ -27,8 +27,12 @@
   [pokemon]='personaje'
   [img]="img"
   [name]="namee"
-  (click)="cerrar()"
   ></pokemon-grafica>
-  
+
 
 <ng-template #notPokemon>Cargando...</ng-template>
+
+
+
+
+<button *ngIf="bool" (click)="cerrar()" class="btn fixed z-10 top-3 left-2 close">X</button>

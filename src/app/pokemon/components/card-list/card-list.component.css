@@ -18,3 +18,29 @@
     z-index: 2;
     background: rgba(0, 0, 0, 0.7);
 }
+
+.nombre{
+  color:#e5e7eb;
+}
+
+.btn {
+  @apply font-bold py-2 px-4 rounded;
+}
+.btn-blue {
+  @apply bg-blue-500 text-white;
+}
+.btn-blue:hover {
+  @apply bg-blue-700;
+}
+.close{
+  color: rgba(255, 255, 255, 0.822);
+  background: #1458e0;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+.close:hover{
+  color: rgb(158, 158, 158);
+  background: rgb(218, 6, 6);
+  transition: .5s all;
+  transform: scale(1.20);
+}
