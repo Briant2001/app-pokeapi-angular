@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:200');
 
 .content{
-  width: 100vw;
-  height: 100vh;
   background-image: url(../../../../assets/fondo.jpeg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: calc(100%) calc(100%);
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .div{
@@ -15,15 +15,29 @@
   width: 100%;
 }
 .div:nth-child(1){
-  grid-area: 3  / 2 / 5 / 3;
+  grid-area: 1  / 2 / 2 / 5;
+}
+.div:nth-child(2){
+  width: 100%;
+  grid-area: 2  / 2 / 5 / 4;
 }
 
-.div:nth-child(2){
+.div:nth-child(3){
   grid-area: 2  / 4 / 5 / 6;
 }
 
 
-
+.title{
+  position: absolute;
+  bottom: 35%;
+  left: 35%;
+}
+.title h1{
+  color: #F9FAFB;
+  font-size: 45px;
+  font-weight: bold;
+  text-shadow: 10px 15px 5px rgba(0, 0, 0, 0.9);
+}
 
 
 
@@ -37,7 +51,7 @@ div[style*="display: block"] {
 
   /* Estilos para el canvas del gráfico */
   canvas {
-    width: 100%; /* Establece el ancho al 100% del contenedor padre */
+    width: 100% !important; /* Establece el ancho al 100% del contenedor padre */
     height: 100%; /* Establece la altura al 100% del contenedor padre */
     border: 1px solid #ddd;
     margin: 0 auto;
@@ -51,15 +65,9 @@ div[style*="display: block"] {
 
 
 
-
-  body {
-    font-family: 'Raleway', sans-serif;
-    background:#eee;
-  }
-
   .wrapper {
 
-    width: 300px;
+    width: 100%;
     height: 200px;
     perspective: 900px;
     margin: 0 auto;
@@ -91,11 +99,6 @@ div[style*="display: block"] {
     z-index: 400;
   }
 
-  .image {
-
-    width: 100%;
-    height: 60%;
-  }
 
   @keyframes simple {
     50% {
@@ -142,20 +145,19 @@ div[style*="display: block"] {
     width:90%;
     height: 350px;
     margin: 0 auto;
-    right: 10%;
     bottom: 0%;
     transform: skewY(20deg);
     font-size: 45px;
     box-shadow: 0px 15px 12px 2px rgba(0, 0, 0, 0.5);
     transition: 1s all;
-    
+
   }
 
   .miContenedorDeGrafica:hover{
     transform: translateX(-100px);
-    
+
   }
-  
+
 .titulo{
   font-size: 25px;
   color: #eee;
@@ -163,3 +165,20 @@ div[style*="display: block"] {
 
 }
   /* Estilos para las etiquetas de los ejes */
+
+
+@media(max-width:765px){
+  .div:nth-child(2){
+    position: initial;
+  }
+  .content{
+    display: block;
+  }
+  .title{
+    position: initial;
+  }
+  .miContenedorDeGrafica{
+    position: initial;
+    transform: none;
+  }
+}

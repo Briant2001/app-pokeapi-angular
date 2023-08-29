@@ -24,6 +24,8 @@
 
 
 .grafica{
+    width: 100vw;
+    height: 100vh;
     position: fixed;
     top: 0%;
     left: -1%;
@@ -53,15 +55,7 @@
   color:#e5e7eb;
 }
 
-.btn {
-  @apply font-bold py-2 px-4 rounded;
-}
-.btn-blue {
-  @apply bg-blue-500 text-white;
-}
-.btn-blue:hover {
-  @apply bg-blue-700;
-}
+
 .close{
   color: rgba(255, 255, 255, 0.822);
   background: #1458e0;

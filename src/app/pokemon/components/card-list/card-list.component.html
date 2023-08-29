@@ -3,8 +3,8 @@
     {{item.id}}
     <div class="card" [style.background-color]="backgroud">
       <div class="p-5 flex flex-col">
-        <div class="rounded-xl overflow-hidden items-center">
-          <img [src]="item.image" alt="" class="w-3/4">
+        <div class="rounded-xl overflow-hidden items-center justify-center">
+          <pokemon-lazy-image [url]="item.image!"  [alt]="item.name"></pokemon-lazy-image>
         </div>
         <h5 class="nombre text-2xl md:text3xl font-medium mt-3" #name>
           {{item.name|uppercase}}
@@ -30,7 +30,11 @@
   ></pokemon-grafica>
 
 
-<ng-template #notPokemon>Cargando...</ng-template>
+<ng-template #notPokemon>
+  <div class="w-full h-screen flex justify-around ">
+    <img src="assets/rings.svg" alt="" width="90px" height="90px">
+  </div>
+</ng-template>
 
 
 

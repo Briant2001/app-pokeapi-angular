@@ -1,0 +1,8 @@
+<img [src]="url" [alt]="alt" class="" (load)="onLoad()" [ngStyle]="{display:hasLoader?'':'none' }">
+
+ <div style="padding: 0 41px;">
+  <img
+  *ngIf="!hasLoader"
+  src="assets/rings.svg" alt="" height="35px" width="35px" >
+
+ </div>

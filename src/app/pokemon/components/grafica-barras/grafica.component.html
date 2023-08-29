@@ -1,46 +1,42 @@
 <div class="content bg-sky-950 grid grid-cols-5 grid-rows-5">
 
   <div class="div">
-    <div class="content-image">
-      <h2>sss</h2>
-      <div id="carousel">
+    <div class="title">
+      <h1>{{name |uppercase}}</h1>
+    </div>
 
-          <div class="rounded wrapper scale-125 transform-gpu">
-              <div class="container" id="c0">
-                  <div class="" id="i0">
 
-                      <div class="city ">
+  </div>
+  <div class="div">
 
-                      <img [src]="img" alt="" class="image" >
-
-                      </div>
-                  </div>
-
-              </div>
-          </div>
+    <div class="rounded wrapper scale-125 transform-gpu">
+      <div class="container" id="c0">
+        <div class="" id="i0">
+          <!-- <img [src]="img" alt=""  > -->
+          <pokemon-lazy-image [url]="img" [alt]="name" class="image"></pokemon-lazy-image>
+        </div>
 
       </div>
 
 
-  </div>
+
+    </div>
   </div>
 
   <div class="div">
 
-    <div id="miContenedorDeGrafica"  class="shadow-2xl grap miContenedorDeGrafica">
-      <div style="display: block;" >
-          <canvas baseChart
-                  [datasets]="barChartData"
-                  [labels]="barChartLabels"
-                  [options]="barChartOptions"
-                  [legend]="barChartLegend"
-                  >
-          </canvas>
-          <p class="titulo" >Estadisticas Bases</p>
-        </div>
-  </div>
+    <div id="miContenedorDeGrafica" class="shadow-2xl grap miContenedorDeGrafica">
+      <div style="display: block;">
+        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+          [legend]="barChartLegend">
+        </canvas>
+        <p class="titulo">Estadisticas Bases</p>
+      </div>
+    </div>
 
   </div>
+
+
 
 
 </div>
@@ -54,11 +50,7 @@
 
 
 <!--
-<div class="div">
-  <h1>ESTADISTICAS</h1>
-  <h3 class="nombre text-orange-600 text-6xl">{{name |uppercase}}</h3>
-</div>
 
-  
+
 
    -->
