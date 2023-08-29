@@ -10,6 +10,18 @@
     }
 }
 
+.container__cards{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.cards__width__box{
+  width: 16.6%;
+  padding: .5rem;
+}
+
+
 
 .grafica{
     position: fixed;
@@ -19,7 +31,25 @@
     background: rgba(0, 0, 0, 0.7);
 }
 
+
+
+@media (max-width: 675px){
+  .cards__width__box{
+    width: 25%;
+    padding: .5rem;
+  }
+}
+
+@media (max-width: 575px){
+  .cards__width__box{
+    width: 50%;
+    padding: .5rem;
+  }
+}
+
+
 .nombre{
+
   color:#e5e7eb;
 }
 

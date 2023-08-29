@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { URLPokemon, SearchResponse } from '../interfaces/pokemons.interface';
 import {SearchResponsePokemon,} from '../interfaces/pokemon.interface';
-import { Pokemon } from './../interfaces/pokemon.datos.interface';
+import { Backgroud, Pokemon } from './../interfaces/pokemon.datos.interface';
 
 import { of,forkJoin ,Subject,Observable } from 'rxjs';
 import { mergeMap  } from 'rxjs/operators';
@@ -35,14 +35,17 @@ export class PokemonService {
       const observables = res.results.map((results)=>
         this.http.get<SearchResponsePokemon>(results.url)
       );
-
       forkJoin(observables).subscribe((response)=>{
+        
+        
+        
         this.information.push(
           ...response.map((response) => ({
             id: response.id,
             name: response.name,
             image: response.sprites?.other?.['official-artwork'].front_default,
-            stats:response.stats
+            stats:response.stats,
+            color:""
           })));
 
         //console.log(this.information);
@@ -61,6 +64,11 @@ export class PokemonService {
 
   datosDisponibles():Observable<Pokemon[]> {
     return this.datosSubject.asObservable();
+  }
+
+  verColor(name:number){
+
+    return this.http.get<Backgroud>("https://pokeapi.co/api/v2/pokemon-color/"+name)
   }
 
 }

@@ -1,7 +1,6 @@
 import { Component, Input, ViewChild, ElementRef } from '@angular/core';
 import { ChartDataset, ChartOptions } from 'chart.js';
 import { Stat } from '../../interfaces/pokemon.interface';
-
 @Component({
   selector: 'pokemon-grafica',
   templateUrl: './grafica.component.html',
@@ -19,6 +18,19 @@ export class GraficaComponent {
 
   public barChartOptions: ChartOptions = {
     responsive: true,
+    scales: {
+      x: {
+        ticks: {
+          color: '#f8fafc' // Cambia el color del texto de las etiquetas del eje X
+        }
+      },
+      y: {
+        ticks: {
+          color: '#f8fafc', // Cambia el color del texto de las etiquetas del eje Y
+          
+        }
+      },
+    },
   };
   public barChartLabels: string[] = [];
   public barChartType: string = 'bar';

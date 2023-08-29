@@ -5,8 +5,16 @@ export interface Pokemon{
   name:string,
   image?:string,
   stats:Stat[]
-
+  color:string
 
 
 }
+
+
+export interface Backgroud{
+  id:number,
+  name:string,
+}
+
+
 

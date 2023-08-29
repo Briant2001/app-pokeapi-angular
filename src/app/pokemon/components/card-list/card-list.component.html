@@ -1,16 +1,16 @@
-<div *ngIf="urlPersonajes.length > 0; else notPokemon" class="flex flex-wrap">
-  <div *ngFor="let item of urlPersonajes; let i=index"  class="w-1/4">
+<div *ngIf="urlPersonajes.length > 0; else notPokemon" class="container__cards">
+  <div *ngFor="let item of urlPersonajes; let i=index"  class="cards__width__box  inline-block align-top">
     {{item.id}}
-    <div class="card">
+    <div class="card" [style.background-color]="backgroud">
       <div class="p-5 flex flex-col">
         <div class="rounded-xl overflow-hidden items-center">
-          <img [src]="item.image" alt="" class="w-36 mx-auto">
+          <img [src]="item.image" alt="" class="w-3/4">
         </div>
         <h5 class="nombre text-2xl md:text3xl font-medium mt-3" #name>
           {{item.name|uppercase}}
         </h5>
         <p class="text-slate-500 text-lg mt-3 cursor-pointer">
-          Lorem ipsum dolor sit amet consectetur</p>
+          </p>
         <a (click)="verGrafica(i,item.image!)" class="cursor-pointer text-center bg-blue-400 text-blue-700 py-2 rounded-lg font-semibold mt-4 hover:bg-blue-300 focus:scale-95 transition-all duration-200 ease-out">
           ver
         </a>

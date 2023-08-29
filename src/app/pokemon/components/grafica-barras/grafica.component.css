@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+
 .content{
   width: 100vw;
   height: 100vh;
@@ -5,27 +7,21 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-
-}
-.content-image{
-  justify-content: center;
-  flex-direction: row;
-  position: absolute;
-  bottom: 25%;
-  left: 25%;
 }
 
 .div{
+
+  position: relative;
   width: 100%;
 }
 .div:nth-child(1){
-  background: red;
-  grid-area: 2  / 2 / 4 / 4;
+  grid-area: 3  / 2 / 5 / 3;
 }
 
-.personaje{
-
+.div:nth-child(2){
+  grid-area: 2  / 4 / 5 / 6;
 }
+
 
 
 
@@ -35,6 +31,7 @@ div[style*="display: block"] {
     text-align: center;
     margin: 20px;
     color: black;
+    height: 100%;
      /* Establece la altura al 100% del contenedor padre */
   }
 
@@ -55,7 +52,6 @@ div[style*="display: block"] {
 
 
 
-  @import url('https://fonts.googleapis.com/css?family=Raleway:200');
   body {
     font-family: 'Raleway', sans-serif;
     background:#eee;
@@ -135,19 +131,35 @@ div[style*="display: block"] {
 
 
 
-  #miContenedorDeGrafica {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-
+  .miContenedorDeGrafica {
     position: absolute;
-    width: 450px;
-    height: 250px;
     margin: 0 auto;
-    right: 15%;
-    bottom: 25%;
-    transform: skewY(10deg);
+
+    background-color:rgba(0, 0, 0, 0.5);
+    border: 1px solid #ddd;
+    min-width: 325px;
+
+    width:90%;
+    height: 350px;
+    margin: 0 auto;
+    right: 10%;
+    bottom: 0%;
+    transform: skewY(20deg);
+    font-size: 45px;
+    box-shadow: 0px 15px 12px 2px rgba(0, 0, 0, 0.5);
+    transition: 1s all;
+    
   }
 
+  .miContenedorDeGrafica:hover{
+    transform: translateX(-100px);
+    
+  }
+  
+.titulo{
+  font-size: 25px;
+  color: #eee;
+  font-weight: bold;
+
+}
   /* Estilos para las etiquetas de los ejes */
